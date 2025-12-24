@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <link rel="stylesheet" href="CC.css">
+     <title>Patient dashboard </title>
+ </head>
+ <body>
+      <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Connect Care</h2>
+      <ul>
+        <li onclick="showSection('overview')">🏠 Overview</li>
+        <li onclick="showSection('appointments')">📅 Book Appointment</li>
+        <li onclick="showSection('prescriptions')">💊 View Prescriptions</li>
+        <li onclick="showSection('order')">🛒 Order Medicines</li>
+        <li onclick="showSection('tracker')">📈 Health Tracker</li>
+        <li onclick="logout()">🚪 Logout</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section id="overview" class="section active">
+        <h1>Welcome, Patient 👋</h1>
+        <div class="cards">
+          <div class="card">🩺 2 Appointments</div>
+          <div class="card">>💊 3 Prescriptions</div>
+          <div class="card">📦 1 Order In Progress</div>
+        </div>
+      </section>
+
+      <section id="appointments" class="section">
+        <h2>Book Appointment</h2>
+        <form>
+          <input type="text" placeholder="Doctor Name" required />
+          <input type="date" required />
+          <input type="time" required />
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+
+       <section id="prescriptions" class="section">
+        <h2>Your Prescriptions</h2>
+        <ul class="list">
+          <li>Paracetamol - 500mg - 2 times a day</li>
+          <li>Vitamin D - Once in morning</li>
+        </ul>
+      </section>
+
+      <section id="order" class="section">
+        <h2>Order Medicines</h2>
+        <form>
+          <input type="text" placeholder="Medicine Name" required />
+          <input type="number" placeholder="Quantity" required />
+          <button type="submit">Order</button>
+        </form>
+      </section>
+
+      <section id="tracker" class="section">
+        <h2>Health Tracker</h2>
+        <p>🧠 BP: 120/80 mmHg</p>
+        <p>❤️ Heart Rate: 76 bpm</p>
+        <p>📏 BMI: 22.3 (Normal)</p>
+        </section>
+     </main>
+  </div>
+
+    <script src="js/patient-dashboard.js"></script>
+
+
+ </body>
+ </html>

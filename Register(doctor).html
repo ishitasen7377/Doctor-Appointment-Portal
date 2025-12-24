@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="octor2.css">
+     <title>Doctor Registration </title>
+</head>
+<body>
+    <div class="form-container">
+    <h2>Doctor Sign-Up</h2>
+    <form id="doctorForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Specialization" required />
+      <input type="text" placeholder="License Number" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+      <p>Already registered? <a href="Login(Doctor).html">Login here</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("doctorForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Doctor registered successfully!");
+      window.location.href = "doctor dasboard.html";
+    });
+  </script>
+</body>
+</html>
